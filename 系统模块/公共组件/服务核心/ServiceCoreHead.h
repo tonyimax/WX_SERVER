@@ -1,41 +1,28 @@
 #ifndef SERVICE_CORE_HEAD_FILE
 #define SERVICE_CORE_HEAD_FILE
 
-//////////////////////////////////////////////////////////////////////////////////
-//包含文件
-
-//MFC 文件
 #include <Nb30.h>
 #include <Afxmt.h>
 #include <AtlBase.h>
-
-//系统文件
 #include "..\..\全局定义\Platform.h"
-//#include "..\..\公共组件\libevent\include\libevent.h"
-//#include "..\..\公共组件\json\json.h"
-
-//////////////////////////////////////////////////////////////////////////////////
-//公共定义
 
 //导出定义
 #ifndef SERVICE_CORE_CLASS
 	#ifdef  SERVICE_CORE_DLL
-		#define SERVICE_CORE_CLASS _declspec(dllexport)
+		#define SERVICE_CORE_CLASS _declspec(dllexport) //导出约定
 	#else
-		#define SERVICE_CORE_CLASS _declspec(dllimport)
+		#define SERVICE_CORE_CLASS _declspec(dllimport) //导入约定
 	#endif
 #endif
 
 //模块定义
 #ifndef _DEBUG
-	#define SERVICE_CORE_DLL_NAME	TEXT("ServiceCore.dll")			//组件名字
+	#define SERVICE_CORE_DLL_NAME	TEXT("ServiceCore.dll") //Release版本
 #else
-	#define SERVICE_CORE_DLL_NAME	TEXT("ServiceCoreD.dll")		//组件名字
+	#define SERVICE_CORE_DLL_NAME	TEXT("ServiceCoreD.dll") //Debug版本
 #endif
 
-//////////////////////////////////////////////////////////////////////////////////
 //导出文件
-
 #ifndef SERVICE_CORE_DLL
 	#include "WHThread.h"
 	#include "WHRegKey.h"
@@ -47,7 +34,5 @@
 	#include "WHCommandLine.h"
 	#include "WHMD5CheckSum.h"
 #endif
-
-//////////////////////////////////////////////////////////////////////////////////
 
 #endif

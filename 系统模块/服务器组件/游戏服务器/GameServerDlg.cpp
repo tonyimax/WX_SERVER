@@ -524,31 +524,9 @@ BOOL CGameServerDlg::OnQueryEndSession()
 }
 
 //命令处理
-LRESULT CGameServerDlg::OnMessageProcessCmdLine(WPARAM wParam, LPARAM lParam)
-{
-	//变量定义
+LRESULT CGameServerDlg::OnMessageProcessCmdLine(WPARAM wParam, LPARAM lParam){
 	CWHCommandLine CommandLine;
-	LPCTSTR pszCommandLine=(LPCTSTR)(lParam);
-
-	//房间标识
-	TCHAR szSrverID[32]=TEXT("");
-	if (CommandLine.SearchCommandItem(pszCommandLine,TEXT("/ServerID:"),szSrverID,CountArray(szSrverID))==true)
-	{
-		//获取房间
-		WORD wServerID=(WORD)(_tstol(szSrverID));
-
-		//启动房间
-		if (wServerID!=0)
-		{
-			//设置变量
-			m_bAutoControl=true;
-
-			//启动房间
-			StartServerService(wServerID);
-		}
-	}
-
+	WORD wRoomId=CommandLine.GetRoomId((LPCTSTR)(lParam));
+	StartServerService(wRoomId);
 	return 0L;
 }
-
-//////////////////////////////////////////////////////////////////////////////////
