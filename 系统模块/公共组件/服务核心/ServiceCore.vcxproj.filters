@@ -21,7 +21,7 @@
     <ClCompile Include="Stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="WHCommandLine.cpp">
+    <ClCompile Include="CmdLine.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="WHDataLocker.cpp">
@@ -62,7 +62,7 @@
     <ClInclude Include="Stdafx.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="WHCommandLine.h">
+    <ClInclude Include="CmdLine.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="WHDataLocker.h">

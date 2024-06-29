@@ -444,7 +444,7 @@ copy /y ..\..\..\运行\Release\Ansi\$(TargetFileName) ..\..\..\发布组件\客
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="WHCommandLine.cpp" />
+    <ClCompile Include="CmdLine.cpp" />
     <ClCompile Include="WHDataLocker.cpp" />
     <ClCompile Include="WHDataQueue.cpp" />
     <ClCompile Include="WHEncrypt.cpp" />
@@ -459,7 +459,7 @@ copy /y ..\..\..\运行\Release\Ansi\$(TargetFileName) ..\..\..\发布组件\客
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ServiceCoreHead.h" />
     <ClInclude Include="Stdafx.h" />
-    <ClInclude Include="WHCommandLine.h" />
+    <ClInclude Include="CmdLine.h" />
     <ClInclude Include="WHDataLocker.h" />
     <ClInclude Include="WHDataQueue.h" />
     <ClInclude Include="WHEncrypt.h" />

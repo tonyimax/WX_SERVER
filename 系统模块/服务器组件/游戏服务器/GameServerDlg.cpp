@@ -1,6 +1,7 @@
 #include "Stdafx.h"
 #include "Resource.h"
 #include "GameServerDlg.h"
+#include "../../公共组件/服务核心/CmdLine.h"
 //////////////////////////////////////////////////////////////////////////////////
 
 //消息定义
@@ -525,8 +526,8 @@ BOOL CGameServerDlg::OnQueryEndSession()
 
 //命令处理
 LRESULT CGameServerDlg::OnMessageProcessCmdLine(WPARAM wParam, LPARAM lParam){
-	CWHCommandLine CommandLine;
-	WORD wRoomId=CommandLine.GetRoomId((LPCTSTR)(lParam));
+	CmdLine cmd;
+	WORD wRoomId=cmd.GetRoomId((LPCTSTR)(lParam));
 	StartServerService(wRoomId);
 	return 0L;
 }

@@ -31,7 +31,7 @@
 	#include "WHIniData.h"
 	#include "WHDataQueue.h"
 	#include "WHDataLocker.h"
-	#include "WHCommandLine.h"
+	#include "CmdLine.h"
 	#include "WHMD5CheckSum.h"
 #endif
 
